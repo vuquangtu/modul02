@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Tạo mới nhân sự</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-primary">
+    <div id="layoutAuthentication">
+      <div id="layoutAuthentication_content">
+        <main>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-7">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                  <div class="card-header">
+                    <h3 class="text-center font-weight-light my-4">
+                      Edit Employee
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="small mb-1" for="fullName"
+                              >Full Name</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="fullName"
+                              type="text"
+                              placeholder="Nhập họ tên"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="dateOfBirth"
+                              >Date Of Birth</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="dateOfBirth"
+                              type="date"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="phone">Phone</label>
+                            <input
+                              class="form-control py-4"
+                              id="phone"
+                              type="text"
+                              placeholder="Nhập số điện thoại"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="email">Email</label>
+                            <input
+                              class="form-control py-4"
+                              id="email"
+                              type="text"
+                              placeholder="Nhập email của bạn"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="position"
+                              >Major</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="position"
+                              type="text"
+                              placeholder="Nhập vị trí công việc"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="department"
+                              >Gender</label
+                            >
+                            <form action="/action_page.php">
+                              <label for="sel1" class="form-label"></label>
+                              <select
+                                class="form-select"
+                                id="sel1"
+                                name="sellist1"
+                              >
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                              </select>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group mt-4 mb-0">
+                        <span
+                          id="createNewAccountBtn"
+                          class="btn btn-primary btn-block"
+                          >Edit Employee</span
+                        >
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Đăng ký tài khoản -->
+    <!-- <script>
+      const fullNameElement = document.querySelector("#fullName");
+      const dateOfBirthElement = document.querySelector("#dateOfBirth");
+      const phoneElement = document.querySelector("#phone");
+      const emailElement = document.querySelector("#email");
+      const positionElement = document.querySelector("#position");
+      const genderElement = document.querySelector("#gender");
+
+     
+
+      const createNewAccountBtn = document.querySelector(
+        "#createNewAccountBtn"
+      );
+
+      const userAPI =
+        "https://65d87debc96fbb24c1bba4d8.mockapi.io/api/v1/users";
+
+      const newEmployee = {};
+
+      function start() {
+        handleCreate();
+      }
+
+      start();
+
+      function handleCreate(userAPI) {
+        createNewAccountBtn.onclick = (e) => {
+          event.preventDefault();
+          newEmployee.fullName = fullNameElement.value;
+          newEmployee.dateOfBirth = dateOfBirthElement.value;
+          newEmployee.phone = phoneElement.value;
+          newEmployee.email = emailElement.value;
+          newEmployee.major = positionElement.value;
+          newEmployee.gender = genderElement.value;
+
+          getUser((users) => {
+            const maxId = users[users.length - 1].id;
+            newEmployee.id = Number(maxId) + 1;
+          });
+
+          // them data
+
+          fetch("https://65d87debc96fbb24c1bba4d8.mockapi.io/api/v1/users/8", {
+            method: "PUT",
+            body: JSON.stringify(newEmployee),
+            headers: { "content-type": "application/json" },
+          })
+            .then((res) => res.json())
+            .then((response) =>
+              console.log("Success:", JSON.stringify(response))
+            )
+            .catch((error) => console.error("Error:", error));
+
+          // xoa data
+        };
+      }
+
+      function getUser(callbak) {
+        fetch(userAPI)
+          .then((res) => res.json())
+          .then(callbak);
+      } -->
+
+    <!-- // Thêm user mới
+    </script> -->
+    <script src="./js/edit-employee.js"></script>
+  </body>
+</html>

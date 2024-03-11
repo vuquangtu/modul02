@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Cập nhật thông tin nhân sự</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-primary">
+    <div id="layoutAuthentication">
+      <div id="layoutAuthentication_content">
+        <main>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-7">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                  <div class="card-header">
+                    <h3 class="text-center font-weight-light my-4">
+                      Cập nhật thông tin nhân sự
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <input class="form-control py-4" id="id" type="hidden" />
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="small mb-1" for="fullName"
+                              >Họ tên</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="fullName"
+                              type="text"
+                              placeholder="Nhập họ tên"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="dateOfBirth"
+                              >Ngày sinh</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="dateOfBirth"
+                              type="date"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="phone"
+                              >Điện thoại</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="phone"
+                              type="text"
+                              placeholder="Nhập số điện thoại"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="email"
+                              >Nhập Email</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="email"
+                              type="text"
+                              placeholder="Nhập email của bạn"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="position"
+                              >Vị trí công việc</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="position"
+                              type="text"
+                              placeholder="Nhập vị trí công việc"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="department"
+                              >Phòng ban</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="department"
+                              type="text"
+                              placeholder="Nhập phòng ban"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="baseSalary"
+                              >Lương cơ bản</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="baseSalary"
+                              type="number"
+                              placeholder="Nhập lương cơ bản"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="productSalary"
+                              >Lương sản phẩm</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="productSalary"
+                              type="number"
+                              placeholder="Nhập lương sản phẩm"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="productQuantity"
+                              >Số lượng sản phẩm đã làm</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="productQuantity"
+                              type="number"
+                              placeholder="Nhập số lượng sản phẩm đã làm"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="isMarried"
+                              >Tình trạng hôn nhân?</label
+                            ><br />
+                            <select name="isMarried" id="isMarried">
+                              <option value="false">Độc thân</option>
+                              <option value="true">Đã kết hôn</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="small mb-1" for="startWorkingDate"
+                              >Ngày bắt đầu làm việc</label
+                            >
+                            <input
+                              class="form-control py-4"
+                              id="startWorkingDate"
+                              type="date"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group mt-4 mb-0">
+                        <span
+                          id="editAccountBtn"
+                          class="btn btn-primary btn-block"
+                          >Cập nhật tài khoản</span
+                        >
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Cập nhật thông tin nhân sự -->
+    <script>
+      $(document).ready(function () {
+        let currentId = window.location.search.substring(1).substring(3);
+        console.log(currentId);
+
+        $.ajax({
+          url: `https://65e1c3e7a8583365b31734fa.mockapi.io/api/v1/employees/${currentId}`,
+          type: "GET",
+          dataType: "text",
+        }).done(function (response) {
+          console.log(response);
+          let currentEmployee = JSON.parse(response);
+
+          $("#id").val(currentEmployee.id);
+          $("#fullName").val(currentEmployee.fullName);
+          $("#dateOfBirth").val(currentEmployee.dateOfBirth);
+          $("#phone").val(currentEmployee.phone);
+          $("#email").val(currentEmployee.email);
+          $("#position").val(currentEmployee.position);
+          $("#department").val(currentEmployee.department);
+          $("#baseSalary").val(currentEmployee.baseSalary);
+          $("#productSalary").val(currentEmployee.productSalary);
+          $("#productQuantity").val(currentEmployee.productQuantity);
+          $("#isMarried").val(currentEmployee.isMarried);
+          $("#startWorkingDate").val(currentEmployee.startWorkingDate);
+        });
+
+        $("#editAccountBtn").click(function () {
+          let requestBody = {
+            fullName: $("#fullName").val(),
+            dateOfBirth: $("#dateOfBirth").val(),
+            phone: $("#phone").val(),
+            email: $("#email").val(),
+            position: $("#position").val(),
+            department: $("#department").val(),
+            baseSalary: $("#baseSalary").val(),
+            productSalary: $("#productSalary").val(),
+            productQuantity: $("#productQuantity").val(),
+            isMarried: $("#isMarried").val(),
+            startWorkingDate: $("#startWorkingDate").val(),
+          };
+
+          $.ajax({
+            url: `https://65e1c3e7a8583365b31734fa.mockapi.io/api/v1/employees/${currentId}`,
+            type: "PUT",
+            dataType: "text",
+            data: requestBody,
+          }).done(function (response) {
+            alert("Cập nhật tài khoản nhân sự thành công !!!");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
